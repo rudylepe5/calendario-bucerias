@@ -4,6 +4,8 @@ Aplicación web estática (HTML, CSS y JavaScript moderno con ES Modules, sin ne
 
 Esta herramienta sustituye las hojas impresas *"DISTRIBUCION DE SEMANAS – DEPARTAMENTO 502"*, calculando las asignaciones mediante un algoritmo reproducible en lugar de mantener tablas manuales.
 
+**Sitio en línea:** <https://rudylepe5.github.io/calendario-bucerias/>
+
 ---
 
 ## Resumen del Algoritmo

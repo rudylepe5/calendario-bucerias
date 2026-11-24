@@ -161,7 +161,7 @@ Build a static web page (HTML, CSS and vanilla JS, no build step) that shows the
   3. Check relative paths, because Pages serves from a `/calendario-bucerias/` sub-path.
   4. Add the live link to the README.
 - **Relevant context:** the Pages sub-path, and the README from sub-task 1. The site entry points are `index.html`, `css/style.css`, `js/main.js`, `js/format.js` and `js/algorithm.js`, all with relative paths. `package.json`, `test/` and the plan file don't need to be served, but they are harmless on Pages. Nothing is committed yet: git shows `README.md` modified and `calendario-bucerias-plan.md`, `css/`, `index.html`, `js/`, `package.json` and `test/` untracked, so the first push needs a commit of all of them. Pages is case-sensitive, and the files already use lowercase names. Because the default season depends on today's date, check the published page again after March, when the season changes.
-- **Status:** [ ] pending
+- **Status:** [x] done. Live at https://rudylepe5.github.io/calendario-bucerias/ (all assets return 200; rendered page shows the picker 2022/2023 to 2032/2033, six family columns, holiday labels and the rental legend). Link added to the README.
 
 ## Decisions
 
