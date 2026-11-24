@@ -1,0 +1,12 @@
+{
+  "name": "calendario-bucerias",
+  "version": "1.0.0",
+  "description": "Distribución anual de semanas del Departamento 502",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

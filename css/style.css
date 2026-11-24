@@ -1,0 +1,213 @@
+/* Estilos principales - Calendario Bucerías */
+:root {
+  --bg-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-color: #212529;
+  --text-muted: #565e66;
+  --border-color: #dee2e6;
+  --primary-color: #1a5fb4;
+  --rental-bg: #ffe873;
+  --rental-border: #c9a400;
+  --holiday-bg: #e8f4fd;
+  --focus-color: #0f62fe;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.header .subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.controls-section {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controls-section label {
+  font-weight: 600;
+}
+
+.controls-section select {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.calendar-section {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  min-height: 300px;
+}
+
+.placeholder-message {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 1rem;
+  font-style: italic;
+}
+
+.season-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1rem;
+  background-color: var(--rental-bg);
+  border: 1px solid var(--rental-border);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-wrapper:focus-visible,
+.controls-section select:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.season-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.season-table th,
+.season-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.season-table th {
+  background-color: #eef1f4;
+  font-weight: 700;
+}
+
+.season-table td.rented {
+  background-color: var(--rental-bg);
+}
+
+.season-table td.holiday {
+  font-weight: 700;
+  background-color: var(--holiday-bg);
+}
+
+.season-table td.holiday.rented {
+  background-color: var(--rental-bg);
+}
+
+.holiday-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.footnote {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.15rem;
+  }
+
+  .calendar-section {
+    padding: 0.75rem;
+  }
+
+  .controls-section {
+    flex-wrap: wrap;
+  }
+
+  .season-table {
+    min-width: 36rem;
+  }
+
+  .season-table th,
+  .season-table td {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.25rem;
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}

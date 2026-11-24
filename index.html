@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribución de Semanas – Departamento 502</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>DISTRIBUCION DE SEMANAS – DEPARTAMENTO 502</h1>
+      <p class="subtitle">Calendario de asignación de semanas para familias copropietarias</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="controls" class="controls-section">
+      <label for="season-select">Temporada:</label>
+      <select id="season-select" disabled>
+        <option value="">Cargando temporadas...</option>
+      </select>
+    </section>
+
+    <!-- La vista de calendario la genera js/main.js -->
+    <section id="calendar-container" class="calendar-section">
+      <div id="calendar-placeholder" class="placeholder-message">
+        <p>Selecciona una temporada para ver la distribución de semanas.</p>
+      </div>
+      <noscript><p>Esta página necesita JavaScript para mostrar el calendario.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>Calendario Bucerías &bull; Departamento 502</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
